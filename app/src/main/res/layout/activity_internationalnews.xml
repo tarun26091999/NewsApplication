@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shaded"
+    tools:context=".internationalnewsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/globaltoolbar"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/globalactionbarTV"
+                android:text="INTERNATIONAL NEWS"
+                android:textColorHighlight="@color/blue"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/globalcategoryREC"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:fadingEdge="horizontal"
+        tools:listitem="@layout/categories_rv"
+        android:layout_below="@id/globaltoolbar"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/globalNewsREC"
+        android:layout_margin="10dp"
+        tools:listitem="@layout/news_rv"
+        android:layout_below="@+id/globalcategoryREC"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/globalLoadingBar"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

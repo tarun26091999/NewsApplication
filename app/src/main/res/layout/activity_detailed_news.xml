@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shaded"
+    tools:context=".DetailedNews">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="Detailed News"
+        app:titleTextColor="@color/green"
+        android:textAlignment="center"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:id="@+id/detailednewsTB" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detailscroll"
+        android:layout_below="@+id/detailednewsTB"
+        android:layout_above="@+id/detailBTN"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/detailedIV"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailedIV"
+                android:text="Title"
+                android:id="@+id/detailTitle"
+                android:textStyle="bold"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="26sp"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailTitle"
+                android:id="@+id/detaildesc"
+                android:text="Sub Description"
+                android:layout_margin="5dp"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detaildesc"
+                android:textColor="@color/white"
+                android:id="@+id/detailcontent"
+                android:text="Content"
+                android:textSize="22sp"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read full news"
+        android:backgroundTint="@color/pink"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:id="@+id/detailBTN"
+        />
+
+</RelativeLayout>
